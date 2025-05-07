@@ -20,6 +20,7 @@ AFRAME.registerComponent('settings', {
 			colorScores: true,
 			realHitsounds: false,
 			disableJumps: false,
+			showPercentOnAccuracy: false,
 
 			timeInBeats: false,
 

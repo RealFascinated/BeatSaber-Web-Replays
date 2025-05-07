@@ -437,8 +437,8 @@ function updateScore(state, payload, force) {
 		state.score.scoreDescription = (note.totalScore + '').replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 		state.score.combo = note.combo;
 		state.score.multiplier = note.multiplier;
-		state.score.accuracy = note.accuracy.toFixed(2);
-		state.score.fcAccuracy = note.fcAccuracy.toFixed(2);
+		state.score.accuracy = note.accuracy.toFixed(2) + (state.settings.showPercentOnAccuracy ? '%' : '');
+		state.score.fcAccuracy = note.fcAccuracy.toFixed(2) + (state.settings.showPercentOnAccuracy ? '%' : '');
 		state.score.misses = note.misses;
 		state.score.energy = note.energy;
 		state.lastNoteTime = note.time;
